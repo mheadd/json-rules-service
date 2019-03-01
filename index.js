@@ -18,12 +18,16 @@ app.post('/', (req, res) => {
     let fact = req.body;
     eng
         .run(fact)
-        .then(events => { 
-            events.map(event => res.send({ messge: event.params.message} ));
+        .then(events => {
+            events.map(event => res.send({
+                messge: event.params.message
+            }));
         })
-        .then(res.send({ messge: "Rules passed!"}))
+        .then(res.send({
+            messge: "Rules passed!"
+        }))
         .catch(err => console.log(err.stack));
-   
+
 });
 
 eng.addRule({
@@ -50,7 +54,7 @@ eng.addRule({
             }]
         }]
     },
-    event: { 
+    event: {
         type: 'fouledOut',
         params: {
             message: 'Player has fouled out!'
