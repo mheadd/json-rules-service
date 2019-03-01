@@ -1,0 +1,17 @@
+{
+  "name": "json-rules-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "Mark J. Headd",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "json-rules-engine": "^2.3.2"
+  }
+}
